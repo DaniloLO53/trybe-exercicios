@@ -1,0 +1,61 @@
+ol li{
+    background-color: yellow;
+}
+
+ol li:nth-child(2n){
+    color: green;
+}
+
+ol li:nth-child(2n + 1){
+    text-transform: uppercase;
+}
+
+h1, h2, h3{
+    color: red;
+}
+
+h1.italico{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li{
+    font-size: 20px;
+}
+
+li.italico{
+    font-weight: bold;
+}
+
+.azul{
+    color: blue;
+}
+
+.azul.java{
+    background-color: pink;
+}
+
+.aliados li:nth-child(1) a:hover{
+    font-weight: bold;
+    color: orange;
+}
+
+.aliados li:nth-child(2) a:hover{
+    font-weight: bold;
+    color: green;
+}
+
+.aliados li:nth-child(3) a:hover{
+    font-weight: bold;
+    color: black;
+}
+
+.aliados li:nth-child(4) a:hover{
+    font-weight: bold;
+    color: blue;
+}
+
+.aliados li:nth-child(5) a:hover{
+    font-weight: bold;
+    color: green;
+}
