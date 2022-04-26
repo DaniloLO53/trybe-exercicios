@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --n: 10;
+  --wrapperWidth: 900px;
+  --wrapperHeight: 600px;
+  /* --blockColor: yellow; */
+  --innerCircleCounter: -1;
+}
+
+body {
+  text-align: center;
+  background-color: black;
+  color: white;
+  position: relative;
+  height: 100vh; /* preciso colocar para o top embaixo funcionar */
+
+}
+
+.wrapper {
+  /* background-color: green; */
+  display: inline-block;
+  width: var(--wrapperWidth);
+  height: var(--wrapperHeight);
+  position: relative;
+  top: 50%; /* 50% do bloco container (body) */
+  transform: translateY(-50%);
+  border-radius: 15px;
+}
+
+.rect {
+  /* background-color: purple; */
+  width: var(--wrapperWidth);
+  height: calc(var(--wrapperHeight) / var(--n));
+}
+
+.block {
+  background-color: white;
+  width: calc(var(--wrapperWidth) / var(--n));
+  height: calc(var(--wrapperHeight) / var(--n));
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.block:hover{
+  border-color: red;
+  border-width: 3px;
+  box-shadow: -10px -10px 20px green;
+  z-index: 3;
+}
+
+.activeBlock {
+  background-color: white;
+}
+
+.palete {
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: purple;
+  transform: rotate(calc(var(--innerCircleCounter) * 1deg));
+  transform-origin: 350px;
+}
+
